@@ -30,7 +30,7 @@ const history = createBrowserHistory()
 
 A [`history`](https://github.com/ReactTraining/history) object to use for navigation.
 
-用来导航的[`history`](https://github.com/ReactTraining/history)对象.
+用来导航的[`history`](https://github.com/ReactTraining/history)对象。
 
 ```jsx
 import createBrowserHistory from 'history/createBrowserHistory'
