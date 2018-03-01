@@ -52,8 +52,6 @@ test('it expands when the button is clicked', () => {
 
 这就是它的所有示例。
 
-## Starting at specific routes
-
 ## 从特定的路由开始
 
 `<MemoryRouter>` 支持`initialEntries` 和 `initialIndex` 属性，因此你可以从一个特定的地址（location）来启动你的app（或者是app的任何一个小部分）。
