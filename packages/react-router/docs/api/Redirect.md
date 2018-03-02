@@ -18,6 +18,7 @@ import { Route, Redirect } from 'react-router'
 
 重定向到的 URL，可以是任何 [`path-to-regexp`](https://www.npmjs.com/package/path-to-regexp) 能够理解有效 URL 路径。在 `to` 中使用的 URL 参数必须由 `from` 覆盖。
 
+
 ```jsx
 <Redirect to="/somewhere/else"/>
 ```
@@ -67,10 +68,10 @@ import { Route, Redirect } from 'react-router'
 
 ## exact: bool
 
-完全匹配 `from` ;相当于 [Route.exact](./Route.md#exact-bool)。
+完全匹配 `from`；相当于 [Route.exact](./Route.md#exact-bool)。
 
 ## strict: bool
 
 Match `from` strictly; equivalent to [Route.strict](./Route.md#strict-bool).
 
-严格匹配  `from` ;相当于[Route.strict](./Route.md#strict-bool)。
+严格匹配  `from`；相当于 [Route.strict](./Route.md#strict-bool)。
