@@ -24,7 +24,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 </div>
 ```
 
-如果应用程序的位置是/ ` news` ，那么 UI 层次结构将是：
+如果应用程序的位置是 /` news` ，那么 UI 层次结构将是：
 
 ```html
 <div>
@@ -33,7 +33,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 </div>
 ```
 
-“react-empty” 的注解只是 React  `null`渲染的实现细节。但为了我们的目的，这是有启发性的。路由始终在技术上“呈现”，即使其渲染空。只要应用程序位置与 Route 的路径匹配，您的组件就会被渲染。
+“react-empty” 的注解只是 React `null` 渲染的实现细节。但为了我们的目的，这是有启发性的。路由始终在技术上用于渲染，即使其渲染空。只要应用程序位置与 Route 的路径匹配，您的组件就会被渲染。
 
 ## Route render methods
 
@@ -55,7 +55,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 ## component
 
-一个 `React` 组件只有当位置匹配是才会渲染。
+一个 `React` 组件只有当位置匹配时才会渲染。
 
 ```jsx
 <Route path="/user/:username" component={User}/>
@@ -65,7 +65,7 @@ const User = ({ match }) => {
 }
 ```
 
-当您使用 `component`（而不是 `render` 或 `children` ）路由器使用从给定组件 [`React.createElement`](https://facebook.github.io/react/docs/react-api.html#createelement) 创建新的 [React element](https://facebook.github.io/react/docs/rendering-elements.html)。这意味着，如果您为 `component` 道具提供了内联功能，则每次渲染都会创建一个新组件。这会导致现有组件卸载和安装新组件，而不是仅更新现有组件。当使用内联函数进行内联渲染时，使用 `render` 或者 `children`（如下所示）。
+当您使用 `component`（而不是 `render` 或 `children` ）路由使用从给定组件 [`React.createElement`](https://facebook.github.io/react/docs/react-api.html#createelement) 创建新的 [React element](https://facebook.github.io/react/docs/rendering-elements.html)。这意味着，如果您为 `component` 道具提供了内联功能，则每次渲染都会创建一个新组件。这会导致现有组件卸载和安装新组件，而不是仅更新现有组件。当使用内联函数进行内联渲染时，使用 `render` 或者 `children`（如下所示）。
 
 ## render: func
 
@@ -128,7 +128,7 @@ const ListItemLink = ({ to, ...rest }) => (
 
 ## path: string
 
-这个路径来理解任何有效的URL [`path-to-regexp`](https://www.npmjs.com/package/path-to-regexp) 
+任何正则表达式可以解析的有效的 URL 路径
 
 ```jsx
 <Route path="/users/:id" component={User}/>
@@ -181,7 +181,7 @@ const ListItemLink = ({ to, ...rest }) => (
 
 如果您需要将 `<Route>` 与当前历史记录位置以外的位置相匹配，则此功能非常有用，如 [Animated Transitions](https://reacttraining.com/react-router/web/example/animated-transitions) 示例中所示。
 
-如果一个 `<Route>` 元素被封装在一个 `<Switch>` 中并且匹配传递给 `<Switch>` （或当前历史位置）的位置，那么传递给 `<Route>` 的 `location` 属性将被< 覆盖> ( given [here](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/modules/Switch.js#L51) )。
+如果 `<Route>` 元素包裹在 `<Switch>` 中，并且匹配地址传递给 `<Switch>`（或者当前的历史位置），那么传递给 `<Route>` 的地址属性将会被传递给 `<Switch>` 的地址属性覆盖（[在这里给出](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/modules/Switch.js#L51)）
 
 ## sensitive: bool
 
