@@ -2,7 +2,7 @@
    Redux 一体化  
    
 
-Redux 是 React 生态系统的重要组成部分。对于想要同时使用React Router和Redux两者的人来说，我们希望尽可能流畅的对他们进行整合
+Redux 是 React 生态系统的重要组成部分。对于想要同时使用 React Router 和 Redux 两者的人来说，我们希望尽可能流畅的对他们进行整合
 
 ## 阻止更新  
   
@@ -16,8 +16,8 @@ Redux 是 React 生态系统的重要组成部分。对于想要同时使用Reac
 
     
 
-问题是，Redux实现了  shouldComponentUpdate(组件是否应该更新) 如果他没有从路由器接收到支持，则没有任何改变的迹象，
-这很容易解决。查找组件connect(连接)位置，然后用withRouter(路由器)将其包装
+问题是， Redux 实现了  shouldComponentUpdate(组件是否应该更新) 如果他没有从路由器接收到支持，则没有任何改变的迹象，
+这很容易解决。查找组件 connect(连接)位置，然后用 withRouter(路由器)将其包装
 
 ```js
 // before
