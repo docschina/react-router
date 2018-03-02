@@ -1,6 +1,6 @@
-# Migrating from v2/v3 to v4
+# Migrating 从 v2/v3 到 v4
 
-React Router v4 完全重写， 所以没有简单的迁移路径。本指南将为您提供一些步骤，以帮助您了解如何升级您的应用程序
+React Router v4 完全重写，所以没有简单的迁移路径。本指南将为您提供一些步骤，以帮助您了解如何升级您的应用程序
 
 **注意：**本迁移指南适用于 React Router v2 和 v3，但为简洁起见，对以前版本的引用仅提及 v3。
 
@@ -15,9 +15,9 @@ React Router v4 完全重写， 所以没有简单的迁移路径。本指南将
 * [PatternUtils](#patternutils)
 * [Link](#link)
 
-## The Router
+## Router
 
-在 React Router v3 中， 有一个  `<Router>`  组件.。它有一个 ` history ` 对象的属性.
+在 React Router v3 中， 有一个  `<Router>`  组件。它有一个 ` history ` 对象的属性.
 
 同样，你可以将应用程序的路由配置提供给 ```<Router>``` 而不用 `routes` 属性 或  `<Router>` 的 ```<children>```。
 
