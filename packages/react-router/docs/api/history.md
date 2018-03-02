@@ -31,11 +31,9 @@ history 对象是可变的，因此我们建议从 [`<Route>`](./Route.md) 的 p
 ```jsx
 class Comp extends React.Component {
   componentWillReceiveProps(nextProps) {
-    // will be true
     // locationChanged 将为 true
     const locationChanged = nextProps.location !== this.props.location
 
-    // INCORRECT, will *always* be false because history is mutable.
     // 错了，因为 history 是可变的所以 locationChanged 将一直为 false
     const locationChanged = nextProps.history.location !== this.props.history.location
   }
