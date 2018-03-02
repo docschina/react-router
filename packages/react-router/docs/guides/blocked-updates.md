@@ -16,7 +16,7 @@ class UpdateBlocker extends React.PureComponent {
 }
 ```
 
-当 `<UpdateBlocker>` 挂载时，任何位置感知子组件都将使用当前 `location` 并 `match` 对象进行呈现。
+当 `<UpdateBlocker>` 挂载时，任何地址感知子组件都将使用当前 `location` 并 `match` 对象进行呈现。
 
 ```jsx
 // location = { pathname: '/about' }

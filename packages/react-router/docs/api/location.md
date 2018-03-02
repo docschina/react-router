@@ -23,7 +23,7 @@
 
 它也可以在 `history.location` 找到，但是你不应该使用它，因为它是可变的，您可以在 [history](./history.md) 文档中阅读更多内容。
 
-位置对象永远不会发生变化，因此您可以在生命周期钩子中使用它来确定何时导航，这对数据抓取和动画非常有用。
+地址对象永远不会发生变化，因此您可以在生命周期钩子中使用它来确定何时导航，这对数据抓取和动画非常有用。
 
 ```js
 componentWillReceiveProps(nextProps) {
@@ -59,7 +59,7 @@ history.push(location)
 history.replace(location)
 ```
 
-最后，您可以将位置传递给以下组件：
+最后，您可以将地址传递给以下组件：
 
 - [Route](./Route.md#location)
 - [Switch](./Switch.md#location)
