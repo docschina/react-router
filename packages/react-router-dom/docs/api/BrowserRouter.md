@@ -1,6 +1,6 @@
 # &lt;BrowserRouter>
 
-A [`<Router>`](../../../react-router/docs/api/Router.md) that uses the HTML5 history API (`pushState`, `replaceState` and the `popstate` event) to keep your UI in sync with the URL.
+使用 HTML5 历史 API 记录（ `pushState `，`replaceState` 和 `popstate` 事件）的 [`Route`](https://github.com/docschina/react-router.cn/blob/cn/packages/react-router/docs/api/Router.md) 使您的UI与URL保持同步。
 
 ```jsx
 import { BrowserRouter } from 'react-router-dom'
@@ -17,7 +17,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 ## basename: string
 
-The base URL for all locations. If your app is served from a sub-directory on your server, you'll want to set this to the sub-directory. A properly formatted basename should have a leading slash, but no trailing slash.
+所有地址的基本网址。 如果您的应用程序是从服务器上的子目录提供的，则需要将其设置为子目录。 格式正确的基本名应该有一个前导斜线，但是结尾不能有斜线。
 
 ```jsx
 <BrowserRouter basename="/calendar"/>
@@ -26,7 +26,7 @@ The base URL for all locations. If your app is served from a sub-directory on yo
 
 ## getUserConfirmation: func
 
-A function to use to confirm navigation. Defaults to using [`window.confirm`](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm).
+用于确认导航的功能。 默认使用 [`window.confirm`](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm)。
 
 ```jsx
 // this is the default behavior
@@ -40,7 +40,7 @@ const getConfirmation = (message, callback) => {
 
 ## forceRefresh: bool
 
-If `true` the router will use full page refreshes on page navigation. You probably only want this in [browsers that don't support the HTML5 history API](http://caniuse.com/#feat=history).
+如果为 `true`，则路由器将在页面导航中使用整页刷新。 您可能只希望在 [browsers that don't support the HTML5 history API](http://caniuse.com/#feat=history)。
 
 ```jsx
 const supportsHistory = 'pushState' in window.history
@@ -49,7 +49,7 @@ const supportsHistory = 'pushState' in window.history
 
 ## keyLength: number
 
-The length of `location.key`. Defaults to 6.
+`location.key` 的长度。 默认为 6。
 
 ```jsx
 <BrowserRouter keyLength={12}/>
@@ -57,4 +57,4 @@ The length of `location.key`. Defaults to 6.
 
 ## children: node
 
-A [single child element](https://facebook.github.io/react/docs/react-api.html#react.children.only) to render.
+一个用于渲染的 [single child element](https://facebook.github.io/react/docs/react-api.html#react.children.only) 

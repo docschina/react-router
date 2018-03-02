@@ -1,3 +1,3 @@
 # &lt;StaticRouter>
 
-Re-exported from core [`StaticRouter`](../../../react-router/docs/api/StaticRouter.md)
+从核心重新导出 [`StaticRouter`](../../../react-router/docs/api/StaticRouter.md)。

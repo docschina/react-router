@@ -1,3 +1,3 @@
 # &lt;Route>
 
-Re-exported from core [`Route`](../../../react-router/docs/api/Route.md)
+从核心重新导出 [`Route`](../../../react-router/docs/api/Route.md)。

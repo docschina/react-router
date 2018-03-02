@@ -1,3 +1,4 @@
 # &lt;Redirect>
 
-Re-exported from core [`Redirect`](../../../react-router/docs/api/Redirect.md)
+从核心重新导出 [`Redirect`](../../../react-router/docs/api/Redirect.md)。
+

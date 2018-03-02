@@ -1,3 +1,3 @@
 # withRouter
 
-Re-exported from core [`withRouter`](../../../react-router/docs/api/withRouter.md)
+从核心重新导出 [`withRouter`](../../../react-router/docs/api/withRouter.md)。
