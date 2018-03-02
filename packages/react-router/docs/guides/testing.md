@@ -50,7 +50,7 @@ test('it expands when the button is clicked', () => {
 })
 ```
 
-这就是它的所有示例。
+以上就是它的所有示例。
 
 ## 从特定的路由开始
 
