@@ -46,11 +46,11 @@ import { Switch, Route } from 'react-router'
 </Fade>
 ```
 
-## location：对象
+## location: object
 
 用于匹配子元素而不是当前历史位置（通常是当前浏览器 URL ）的位置对象。
 
-## children: 节点
+## children: nodex
 
 `<Switch>` 的所有子级都应该是 `<Route>` 或 `<Redirect>` 元素。将呈现当前位置匹配的第一个子级。
 

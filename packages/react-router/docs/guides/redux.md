@@ -3,7 +3,7 @@
 
 Redux 是 React 生态系统的重要组成部分。对于想要同时使用 React Router 和 Redux 两者的人来说，我们希望尽可能流畅的对他们进行整合。
 
-## 阻止更新  
+## Blocked Updates
   
    
 通常，React Router 和 Redux 可以很好的协同工作。偶尔，应用程序可以有一个在位置发生变化时不更新的组件（子路由或活动单行链接不更新）。
@@ -27,7 +27,7 @@ import { withRouter } from 'react-router-dom'
 export default withRouter(connect(mapStateToProps)(Something))
 ```
 
-## 深度集成
+## Deep integration
 
 有些人想:
 
