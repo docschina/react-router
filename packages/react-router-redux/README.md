@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/react-router-redux/next.svg?style=flat-square)](https://www.npmjs.com/package/react-router-redux)  [![npm downloads](https://img.shields.io/npm/dm/react-router-redux.svg?style=flat-square)](https://www.npmjs.com/package/react-router-redux) [![build status](https://img.shields.io/travis/reactjs/react-router-redux/master.svg?style=flat-square)](https://travis-ci.org/reactjs/react-router-redux)
 
-> **保持你的状态与你的路由器同步 :闪烁:
+> **保持你的状态与你的 router 同步 :闪烁:
 
 这是软件测试版，需要准备的:
 
