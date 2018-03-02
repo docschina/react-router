@@ -16,7 +16,7 @@ import { Route, Redirect } from 'react-router'
 
 ## to: string
 
-要重定向到的 URL，[`path-to-regexp`](https://www.npmjs.com/package/path-to-regexp) 可以识别任何有效的 URL 路径。在 `to` 中使用的 URL 参数必须由 `from` 覆盖。
+重定向到的 URL，可以是任何 [`path-to-regexp`](https://www.npmjs.com/package/path-to-regexp) 能够理解有效 URL 路径。在 `to` 中使用的 URL 参数必须由 `from` 覆盖。
 
 ```jsx
 <Redirect to="/somewhere/else"/>
@@ -24,7 +24,7 @@ import { Route, Redirect } from 'react-router'
 
 ## to: object
 
-要重定向到的地址。  `pathname`  可以是 [`path-to-regexp`](https://www.npmjs.com/package/path-to-regexp) 能够理解的任何有效的 URL 路径。
+重定向到的 location，`pathname` 可以是任何 [`path-to-regexp`](https://www.npmjs.com/package/path-to-regexp) 能够理解的有效的 URL 路径。
 
 ```jsx
 <Redirect to={{
@@ -36,7 +36,7 @@ import { Route, Redirect } from 'react-router'
 
 ## push: bool
 
-当 `true` 时，重定向会将新地址推入到历史记录中，而不是替换当前地址。
+当 `true` 时，重定向会将新地址推入 history 中，而不是替换当前地址。
 
 ```jsx
 <Redirect push to="/somewhere/else"/>
@@ -44,7 +44,7 @@ import { Route, Redirect } from 'react-router'
 
 ## from: string
 
-重定向 from 的路径名。[`path-to-regexp`](https://www.npmjs.com/package/path-to-regexp) 可以识别的任何有效的 URL 路径。
+重定向 from 的路径名。可以是任何 [`path-to-regexp`](https://www.npmjs.com/package/path-to-regexp) 能够识别的有效的 URL 路径。
 
 所有匹配的 URL 参数都提供给 `to` 中的模式。必须包含在 `to` 中使用的所有参数。 `to ` 未使用的其他参数将被忽略。
 
