@@ -54,7 +54,7 @@ test('it expands when the button is clicked', () => {
 
 ## 从特定的路由开始
 
-`<MemoryRouter>`  支持 `initialEntries`  和 `initialIndex` 属性，因此你可以从一个特定的地址（location）来启动你的 app（或者是 app 的任何一个小部分）。
+`<MemoryRouter>` 支持 `initialEntries` 和 `initialIndex` 属性，因此你可以从一个特定的地址（location）来启动你的 app（或者是 app 的任何一个小部分）。
 
 ```jsx
 test('current user is active in sidebar', () => {
