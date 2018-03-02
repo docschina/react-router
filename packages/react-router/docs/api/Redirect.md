@@ -48,7 +48,7 @@ import { Route, Redirect } from 'react-router'
 
 所有匹配的 URL 参数都提供给 `to` 中的模式。必须包含在 `to` 中使用的所有参数。 `to ` 未使用的其他参数将被忽略。
 
-这只能用于在 `<Redirect>` 内部渲染 `<Switch>` 时匹配地址。有关更多详情，请参阅 [`<Switch children>`](./Switch.md#children-node)。
+这只能用于在 `<Redirect>` 内部渲染 `<Switch>` 时匹配地址。有关更多详情，请查阅参阅 [`<Switch children>`](./Switch.md#children-node)。
 
 ```jsx
 <Switch>
