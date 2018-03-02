@@ -37,7 +37,7 @@ export default class LoadableDashboard extends React.Component {
 
 ## Code Splitting and Server-Side Rendering
 
-[`react-loadable`] 包括 [服务器端渲染指南][ssr]。你所需要做的就是在你的 `.babelrc` 中加入 [`babel-plugin-import-inspector`] 并且你的服务器端可以正常工作。下面是一个 `.babelrc` 文件的例子：
+[`react-loadable`] 包括[服务器端渲染指南][ssr]。你所需要做的就是在你的 `.babelrc` 中加入 [`babel-plugin-import-inspector`] 并且你的服务器端可以正常工作。下面是一个 `.babelrc` 文件的例子：
 
 ```json
 {
