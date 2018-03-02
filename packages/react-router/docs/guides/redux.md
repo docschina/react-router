@@ -1,7 +1,7 @@
 #  Redux Integration  
 
 
-Redux 是 React 生态系统的重要组成部分。对于想要同时使用 React Router 和 Redux 两者的人来说，我们希望尽可能流畅的对他们进行整合。
+Redux 是 React 生态系统的重要组成部分。对于想要同时使用 React Router 和Redux 两者的人来说，我们希望尽可能流畅的对他们进行整合。
 
 ## Blocked Updates
 
@@ -42,4 +42,3 @@ export default withRouter(connect(mapStateToProps)(Something))
 但是，我们知道有些人对此有强烈的感受，因此我们尽可能提供最好的深度集成。截至React Router的第4版，Redux包已经成为了该项目的一部分。有关深度集成，请参考它
 
 [React Router Redux](https://github.com/reacttraining/react-router/tree/master/packages/react-router-redux)
-
