@@ -1,6 +1,6 @@
 # &lt;Route>
 
-Route 组件也许是 React Router 中最重要的组件，它可以让你理解并学习如何使用它。它最基本的职责是在 <u>location</u> 与路由的 path 匹配时呈现一些 UI。
+Route 组件也许是 React Router 中最重要的组件，它可以让你理解并学习如何使用它。它最基本的职责是在 <u>location</u> 与 Route 的 path 匹配时呈现一些 UI。
 
 考虑下面的代码：
 
@@ -33,7 +33,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 </div>
 ```
 
-“react-empty” 的注解只是 React `null` 渲染的实现细节。但为了我们的目的，这是有启发性的。路由始终在技术上用于渲染，即使其渲染空。只要应用程序位置与 Route 的路径匹配，您的组件就会被渲染。
+“react-empty” 的注解只是 React `null` 渲染的实现细节。但为了我们的目的，这是有启发性的。Route 始终在技术上用于渲染，即使其渲染空。只要应用程序位置与 Route 的路径匹配，您的组件就会被渲染。
 
 ## Route render methods
 
@@ -65,7 +65,7 @@ const User = ({ match }) => {
 }
 ```
 
-当您使用 `component`（而不是 `render` 或 `children` ）路由使用从给定组件 [`React.createElement`](https://facebook.github.io/react/docs/react-api.html#createelement) 创建新的 [React element](https://facebook.github.io/react/docs/rendering-elements.html)。这意味着，如果您为 `component` 道具提供了内联功能，则每次渲染都会创建一个新组件。这会导致现有组件卸载和安装新组件，而不是仅更新现有组件。当使用内联函数进行内联渲染时，使用 `render` 或者 `children`（如下所示）。
+当您使用 `component`（而不是 `render` 或 `children` ）Route 使用从给定组件 [`React.createElement`](https://facebook.github.io/react/docs/react-api.html#createelement) 创建新的 [React element](https://facebook.github.io/react/docs/rendering-elements.html)。这意味着，如果您为 `component` 道具提供了内联功能，则每次渲染都会创建一个新组件。这会导致现有组件卸载和安装新组件，而不是仅更新现有组件。当使用内联函数进行内联渲染时，使用 `render` 或者 `children`（如下所示）。
 
 ## render: func
 
@@ -95,7 +95,7 @@ const FadingRoute = ({ component: Component, ...rest }) => (
 
 有时你需要渲染路径是否匹配位置。在这些情况下，您可以使用函数 `children` 属性，它的工作原理与渲染完全一样，不同之处在于它是否存在匹配。
 
-`children` 渲染道具接收所有相同的 [route props](https://github.com/songda1013/react-router.cn/blob/cn/packages/react-router/docs/api/Route.md#route-props) 作为 `component` 和 `render` 方法，如果路由与 URL 不匹配，`match` 则为 `null` ，这允许你动态调整你的 UI 界面，基于路线是否匹配，如果路线匹配我们则添加一个 `active` 类
+`children` 渲染道具接收所有相同的 [route props](https://github.com/songda1013/react-router.cn/blob/cn/packages/react-router/docs/api/Route.md#route-props) 作为 `component` 和 `render` 方法，如果 Route 与 URL 不匹配，`match` 则为 `null` ，这允许你动态调整你的 UI 界面，基于路线是否匹配，如果路线匹配我们则添加一个 `active` 类
 
 ```jsx
 <ul>
