@@ -1,5 +1,4 @@
 #  Redux 一体化  
-   Redux 一体化  
    
 
 Redux 是 React 生态系统的重要组成部分。对于想要同时使用 React Router 和 Redux 两者的人来说，我们希望尽可能流畅的对他们进行整合
