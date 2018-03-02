@@ -1,10 +1,10 @@
 # Testing
 
-React Router 依赖于 React 。这会影响您如何通过使用我们的组件来测试你的组件。
+React Router 依赖于 React 。这会影响你如何通过使用我们的组件来测试你的组件。
 
 ## Context
 
-如果您尝试单元测试呈现 `<Link>` 或者 `<Router>` 组件，你会得到一些上下文的错误信息和警告信息。虽然你可能会试图自己去掉路由器上下文，但我们建议你将你的单元测试包裹在 `<StaticRouter>` 或者 `<MemoryRouter>` 中。让我们来看一下：
+如果你尝试单元测试呈现 `<Link>` 或者 `<Router>` 组件，你会得到一些上下文的错误信息和警告信息。虽然你可能会试图自己去掉路由器上下文，但我们建议你将你的单元测试包裹在 `<StaticRouter>` 或者 `<MemoryRouter>` 中。让我们来看一下：
 
 ```jsx
 class Sidebar extends Component {
