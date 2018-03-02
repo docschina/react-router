@@ -55,7 +55,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 ## component
 
-一个 `React` 组件只有当位置匹配时才会渲染。
+只有当位置匹配时才会渲染的 `React` 组件。
 
 ```jsx
 <Route path="/user/:username" component={User}/>
@@ -128,7 +128,7 @@ const ListItemLink = ({ to, ...rest }) => (
 
 ## path: string
 
-任何正则表达式可以解析的有效的 URL 路径
+任何 [`path-to-regexp`](https://www.npmjs.com/package/path-to-regexp) 可以解析的有效的 URL 路径
 
 ```jsx
 <Route path="/users/:id" component={User}/>
