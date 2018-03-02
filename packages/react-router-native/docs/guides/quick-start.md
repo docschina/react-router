@@ -1,10 +1,10 @@
 # Quick Start
 
-If this is your first time building a React Native app, we recommend you check out the official ["Getting Started"](https://facebook.github.io/react-native/docs/getting-started.html) guide.
+如果这是你首次构建 React Native 应用程序，我们推荐你查看官方指南：["Getting Started"](https://facebook.github.io/react-native/docs/getting-started.html) 。
 
 ## Installation
 
-React Router Native is published to [npm](https://npm.im/react-router-native). You can install it with either `npm` or [`yarn`](https://yarnpkg.com).
+React Router Native 已经发布到 [npm](https://npm.im/react-router-native)上。因此你可以使用 `npm` 或者 [`yarn`](https://yarnpkg.com/) 进行下载。
 
 ```sh
 npm install react-router-native
@@ -12,9 +12,9 @@ npm install react-router-native
 yarn add react-router-native
 ```
 
-Once you've initialized a new React Native project, you can copy/paste any of the examples into your `index.ios.js` or `index.android.js` files to play around with them.
+当你初始化完成一个新的 React Native 项目后，你可以复制或粘贴任意示例代码到 `index.ios.js` 或者 `index.android.js` 文件中。
 
-Here's the basic example:
+基本示例代码如下：
 
 ```jsx
 import React from 'react'

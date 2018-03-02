@@ -1,14 +1,12 @@
 # Animation
 
-This guide is a little sparse right now, but should provide enough insight to help you implement some great animations if you're already comfortable with animations generally. Because React Router mostly is just components, all the typical animation strategies apply. The only difference is the things that trigger an animation. This guide attempts to spark some inspiration rather than provide copy/paste code.
+本指南现在有些零散，但是如果你已经习惯了动画，本篇指南应该可以提供足够的见解来帮助你实现一些优秀的动画。由于 React Router 主要只是组件，所以对于所有典型的动画策略都适用。唯一的区别是触发动画的东西。本指南试图去激发灵感，而不是提供复制或者粘贴的代码。
 
 # Element Transitions
 
-As the user navigates, some elements should animate while remaining on the
-page. The [`Route`][Route] `children` prop is perfect for these situations.
+当用户导航时，某些元素应在保留在页面上。在这种情况非常适合使用 [`Route`][Route] `children`  。
 
-Consider this app without the router. When the `<TouchableHighlight/>` is pressed
-the sidebar's animation will toggle.
+考虑一下这个没有 router 的应用程序。当触发 `<TouchableHighlight/>` 时，边栏的动画将会切换。
 
 ```jsx
 class Sidebar extends Component {
@@ -53,7 +51,7 @@ class App extends Component {
 }
 ```
 
-Now we can swap out the state with a route, making it possible to deep link to the sidebar being open from anywhere, or even deep link from other apps.
+现在，我们可以通过 route 替换状态，从而让你可以从任何地方打开侧边栏的深层链接，甚至与其他应用程序的深层链接。
 
 ```jsx
 class App extends Component {
@@ -76,10 +74,7 @@ class App extends Component {
 }
 ```
 
-This can be very interesting in lists. For each item in the list you can
-make a route that matches it, and then do an animation to open or close
-that section of the list, or transition one of its elements to the
-header.
+这在列表中非常有趣。对于列表中的每个项目，你可以创建与其匹配的 route，然后执行动画以打开或关闭该列表的这一部分，或将其中一个元素转换为 header 。
 
 ```jsx
 <View>
@@ -93,15 +88,15 @@ header.
 </View>
 ```
 
-Each chutney has its own route thats always rendering as part of the list, when it becomes active (they tapped the item or from some other means), it could animate an image to the header with fixed positioning (and then probably stop rendering after the animation is complete and letting the "real" header scroll w/ the page).
+每个 chutney 都有属于自己的 route ，这些 route 总是作为列表的一部分进行渲染，当它处于活动状态时（通过点击该项目或通过其他方式），它可以将图像设置为具有固定位置的标题（然后可能在动画完成后停止渲染，并让 “真实” 标题滚动到页面）。
 
 ## Page Transitions
 
-Because of components' declarative nature, when you're at one screen, press a link, and navigate to another, the old page is not in the render tree to even animate anymore! The key is remembering that React elements are just objects. You can save them and render them again.  That's the strategy for animating from one page (that leaves the render tree) to another.
+由于组件的声明性，当你在一个屏幕上，按下一个链接，然后导航到另一个屏幕时，旧页面将不再位于渲染树中，甚至不再具有动画效果！关键是记住 React 元素只是对象。你可以保存它们并再次渲染它们。这是从一个页面（离开渲染树）到另一个页面的动画策略。
 
-If you visited this site on mobile, or you shrink the browser really small, you can click the back button to see this type of animation.  The strategy is to not think about animations at first. Just render your routes and links and make that all work, then wrap your components with animated components to spiff things up.
+如果你在移动设备上访问过此网站，或者你将浏览器缩小得很小，则可以单击后退按钮查看此类动画。这个策略是首先不要考虑动画。只需渲染你的 route 和 link，并使他们都工作起来，然后用动画组件包装你的组件，把它们包装起来。
 
-We'll consider some child routes in a page:
+我们将在一个页面中考虑使用一些子路由：
 
 ```jsx
 class Parent extends Component {
@@ -118,7 +113,7 @@ class Parent extends Component {
 }
 ```
 
-Once that works without animations, we're ready to add an animation around it.
+一旦它在没有动画的情况下工作，我们就可以在它周围添加动画了。
 
 
 ```jsx
@@ -134,9 +129,9 @@ Once that works without animations, we're ready to add an animation around it.
 </AnimatedChild>
 ```
 
-It's important to use a [`<Switch>`][Switch]. It will ensure that only one route can match, and therefore gives us a single element on `props.children` to hang on to and render during the animation. Finally, you *must* pass the location to `Switch`. It prefers `props.location` over the internal router location, which enables the saved child element to be renered later and continue to match the old location.
+这对于使用 [`<Switch>`][Switch] 很重要。它将确保只有一条路径可以匹配，因此在 `props.children` 上给我们一个单个元素在播放动画的同时坚持渲染。最后，你必须通过该位置去 `Switch` 。它更喜欢在 internal router location 使用 `props.location` ，这使得保存的子元素能够在以后被更换，并且继续匹配旧的 location 。
 
-There are a handful of props handed to `AnimatedChild` that the parent will know about as it manages the animation. Again, this guide is more inspiration than copy/paste right now, feel free to look at the source of this website for exact implementation. Alright, let's check out the implementation of `AnimatedChild` (it's copy pasted from the animation used on this site).
+在管理动画时，父级会将知道一些交给 `AnimatedChild` 的支持。同样的，本指南现在比复制/粘贴更具启发性，请随时查看本网站的来源以了解具体实施情况。好的，让我们来看看 `AnimatedChild` 的实现（它是从本网站使用的动画粘贴的副本）。
 
 ```jsx
 class AnimatedChild extends Component {
@@ -199,27 +194,27 @@ class AnimatedChild extends Component {
 }
 ```
 
-Hope that helps get you thinking. Again, the animations themselves are the same with the router or not, the difference is knowing when to trigger them. Here's a list for things to check in `componentWillReceiveProps` to decide what to do with an animation based on the router's location:
+希望这能帮助你思考。同样，动画本身与 router 是一样的，区别在于知道何时触发它们。以下列表中列出了要在 `componentWillReceiveProps` 中检查的内容，以便根据 router 的 location 决定如何处理动画:
 
-General change in location
+location 的一般的变化
 
 ```js
 nextProps.location !== this.props.location`
 ```
 
-Going from child to parent:
+由子级到父级：
 
 ```js
 nextProps.match.isExact && !this.props.match.isExact
 ```
 
-Going from parent to child:
+由父级到子级：
 
 ```js
 !nextProps.match.isExact && this.props.match.isExact
 ```
 
-Good luck! We hope to expand on this section with a lot more detail and live examples.
+祝你好运！我们希望通过更多的细节和实例来扩展这一部分。
 
-  [Route]:../api/Route.md
-  [Switch]:../api/Switch.md
+[Route]:../api/Route.md
+[Switch]:../api/Switch.md
