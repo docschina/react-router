@@ -29,7 +29,7 @@ history 栈中的一个 `location` 数组。这些可能是具有 `{ pathname, s
 
 ## getUserConfirmation: func
 
-用于确认导航的函数。在使用 `<MemoryRouter>` 时，直接使用 `<Prompt>`，您必须使用这个选项。
+用于确认导航的函数。在使用 `<MemoryRouter>` 时，直接使用 `<Prompt>`，你必须使用这个选项。
 
 ## keyLength: number
 
