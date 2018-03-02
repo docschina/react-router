@@ -33,7 +33,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 </div>
 ```
 
-“react-empty” 的注解只是 React `null` 渲染的实现细节。但为了我们的目的，这是有启发性的。Route 始终在技术上用于渲染，即使其渲染空。只要应用程序位置与 Route 的路径匹配，您的组件就会被渲染。
+“react-empty” 的注解只是 React `null` 渲染的实现细节。但为了我们的目的，这是有启发性的。Route 始终在技术上用于渲染，即使其渲染为空。只要应用程序位置与 Route 的路径匹配，您的组件就会被渲染。
 
 ## Route render methods
 
