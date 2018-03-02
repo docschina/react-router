@@ -22,7 +22,6 @@ npm install react-router-dom
 ```
 
 现在，您可以将任何示例复制/粘贴到 `src/App.js` 中。
-
 基本示例:
 
 ```jsx
@@ -99,6 +98,6 @@ const BasicExample = () => (
 export default BasicExample
 ```
 
-现在你可以去完善你的项目了，旅途愉快！
+现在你可以去完善你的项目了！
 
 [crapp]:https://github.com/facebookincubator/create-react-app
