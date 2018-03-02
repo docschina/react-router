@@ -2,6 +2,7 @@
 
 在服务器上渲染有点儿不同，因为他们都是无状态的。基本思想是我们将 app 包装在一个无状态的 `<StaticRouter>` 中而不是 `<BrowserRouter>` 中。我们通过服务器传入请求的 URL，以便路由可以匹配，然后我们将在下面讨论 `<context>` 属性。
 
+
 ```jsx
 // 用户端
 <BrowserRouter>
@@ -86,6 +87,39 @@ if (context.url) {
 }
 ```
 
+## 404, 401, 或任何其他 status
+
+我们可以做同样的事情，如上所述。 创建一个组件，添加一些 context 并将其渲染在 app 的任何位置以获取不同status 代码。
+
+```jsx
+const Status = ({ code, children }) => (
+  <Route render={({ staticContext }) => {
+    if (staticContext)
+      staticContext.status = code
+    return children
+  }}/>
+)
+```
+
+现在，您可以在 app 中的任何位置渲染  `Status` ，以便将代码添加到静态 `staticContext`。
+
+```jsx
+const NotFound = () => (
+  <Status code={404}>
+    <div>
+      <h1>Sorry, can’t find that.</h1>
+    </div>
+  </Status>
+)
+
+// somewhere else
+<Switch>
+  <Route path="/about" component={About}/>
+  <Route path="/dashboard" component={Dashboard}/>
+  <Route component={NotFound}/>
+</Switch>
+```
+
 ## 整合到一起
 
 这不是一个真正的 app，但它显示了所通常应用的代码，你需要把它放在一起的。
@@ -156,6 +190,20 @@ const routes = [
 ]
 ```
 
+然后使用此配置在应用程序中渲染出你的路由
+
+```jsx
+import { routes } from './routes'
+
+const App = () => (
+  <Switch>
+    {routes.map(route => (
+      <Route {...route}/>
+    ))}
+  </Switch>
+)
+```
+
 然后在服务器上你会有像这样的代码：
 
 ```js
@@ -183,10 +231,8 @@ Promise.all(promises).then(data => {
 
 您可能会对我们的 [React Router Config][RRC] 软件包感兴趣，以协助用静态路由配置来加载数据和服务器渲染。
 
+
 [StaticRouter]: ../api/StaticRouter.md
 [BrowserRouter]: ../api/BrowserRouter.md
 [Redirect]: ../api/Redirect.md
 [RRC]: https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
-
-
-
