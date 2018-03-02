@@ -1,6 +1,6 @@
 # match
 
-一个 `match` 对象中包涵了有关如何匹配URL的信息。`match` 对象中包涵以下属性：
+一个 `match` 对象中包涵了有关如何匹配 URL 的信息。`match` 对象中包涵以下属性：
 
 - `params` - (object) key／value 与动态路径的 URL 对应解析
 - `isExact` - (boolean) `true`  如果匹配整个 URL （没有结尾字符）
@@ -9,13 +9,13 @@
 
 你将会在这些地方用到 `match` 对象：
 
-- [Route component](./Route.md#component) 如 `this.props.match`
-- [Route render](./Route.md#render-func) 如 `({ match }) => ()`
-- [Route children](./Route.md#children-func) 如 `({ match }) => ()`
-- [withRouter](./withRouter.md) 如 `this.props.match`
-- [matchPath](./matchPath.md) 如  返回值
+- [Route component](./Route.md#component) 例如 `this.props.match`
+- [Route render](./Route.md#render-func) 例如 `({ match }) => ()`
+- [Route children](./Route.md#children-func) 例如 `({ match }) => ()`
+- [withRouter](./withRouter.md) 例如 `this.props.match`
+- [matchPath](./matchPath.md) 例如  返回值
 
-如果 Route 没有 `path` , 那么将会一直与离它最近的父级匹配。这也同样适用于`withRouter`。
+如果 Route 没有 `path`，那么将会一直与他最近的父级匹配。这也同样适用于`withRouter`。
 
 ## null matches
 
