@@ -1,6 +1,6 @@
 # &lt;Router>
 
-Router 是所有路由组件共用的底层接口，通常，我们的应用程序将使用其中一个高级路由器代替：
+Router 是所有路由组件共用的底层接口。通常，我们的应用程序将使用其中一个高级路由器代替：
 
 - [`<BrowserRouter>`](../../../react-router-dom/docs/api/BrowserRouter.md)
 - [`<HashRouter>`](../../../react-router-dom/docs/api/HashRouter.md)

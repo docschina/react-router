@@ -80,7 +80,7 @@ import { Simulate } from 'react-addons-test-utils'
 // 把整个 app 都放在一个 MemoryRouter 里面渲染的其中一个方法是
 // 把他们都放进一个要执行的步骤列表里面，
 // 当地址发生变化的时候，
-// 它就会连同 `match`， `location`， 和 `history` 一起被回调，
+// 它就会连同 `match`，`location`，和 `history` 一起被回调，
 // 因此，你可以控制整个流程和做断言。
 const renderTestSequence = ({
   initialEntries,
@@ -161,6 +161,7 @@ it('navigates around', (done) => {
 
     // 以及每次位置变化时执行的步骤
     steps: [
+      
       // 初始渲染
       ({ history, div }) => {
         // 断言屏幕的输出是否如同我们期望的输出
