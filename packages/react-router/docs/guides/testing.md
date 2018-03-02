@@ -1,10 +1,10 @@
 # Testing
 
-React Router依赖于React。这会影响您如何通过使用我们的组件来测试你的组件。
+React Router 依赖于 React 。这会影响您如何通过使用我们的组件来测试你的组件。
 
 ## Context
 
-如果您尝试单元测试呈现`<Link>`或者`<Router>`组件，你会得到一些上下文的错误信息和警告信息。虽然你可能会试图自己去掉路由器上下文，但我们建议你将你的单元测试包裹在`<StaticRouter>`或者`<MemoryRouter>`中。让我们来看一下：
+如果您尝试单元测试呈现 `<Link>` 或者 `<Router>` 组件，你会得到一些上下文的错误信息和警告信息。虽然你可能会试图自己去掉路由器上下文，但我们建议你将你的单元测试包裹在 `<StaticRouter>` 或者 `<MemoryRouter>` 中。让我们来看一下：
 
 ```jsx
 class Sidebar extends Component {
@@ -54,7 +54,7 @@ test('it expands when the button is clicked', () => {
 
 ## 从特定的路由开始
 
-`<MemoryRouter>` 支持`initialEntries` 和 `initialIndex` 属性，因此你可以从一个特定的地址（location）来启动你的app（或者是app的任何一个小部分）。
+`<MemoryRouter>`  支持 `initialEntries`  和 `initialIndex` 属性，因此你可以从一个特定的地址（location）来启动你的 app（或者是 app 的任何一个小部分）。
 
 ```jsx
 test('current user is active in sidebar', () => {
@@ -77,10 +77,10 @@ import React from 'react'
 import { Route, Link, MemoryRouter } from 'react-router-dom'
 import { Simulate } from 'react-addons-test-utils'
 
-// 把整个app都放在一个MemoryRouter里面渲染的其中一个方法是
+// 把整个 app 都放在一个 MemoryRouter 里面渲染的其中一个方法是
 // 把他们都放进一个要执行的步骤列表里面，
 // 当地址发生变化的时候，
-// 它就会连同`match`， `location`, 和 `history`一起被回调，
+// 它就会连同 `match`， `location`， 和 `history` 一起被回调，
 // 因此，你可以控制整个流程和做断言。
 const renderTestSequence = ({
   initialEntries,
@@ -134,7 +134,7 @@ const renderTestSequence = ({
   render(<Test/>, div)
 }
 
-// 我们的Subject是这个App，但是你也可以测试你的应用的任何子部分
+// 我们的 Subject 是这个 App，但是你也可以测试你的应用的任何子部分
 const App = () => (
   <div>
     <Route exact path="/" render={() => (
@@ -156,12 +156,11 @@ it('navigates around', (done) => {
 
   renderTestSequence({
 
-    // 告诉它你正在测试的subject
+    // 告诉它你正在测试的 subject
     subject: App,
 
     // 以及每次位置变化时执行的步骤
     steps: [
-      
       // 初始渲染
       ({ history, div }) => {
         // 断言屏幕的输出是否如同我们期望的输出
