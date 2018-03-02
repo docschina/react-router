@@ -1,6 +1,6 @@
 # 快速开始
 
-您可能想要阅读以下内容：
+你可能想要阅读以下内容：
 
 * [Web 快速开始](../../../react-router-dom/docs/guides/quick-start.md)
 * [Native 快速开始](../../../react-router-native/docs/guides/quick-start.md)
