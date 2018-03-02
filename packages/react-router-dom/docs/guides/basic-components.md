@@ -1,6 +1,6 @@
 # Basic Components
 
-React Router中有三种类型的组件： router components, route matching components，和 navigation components。
+React Router 中有三种类型的组件： router components, route matching components，和 navigation components。
 
 你在 Web 应用程序中使用的所有组件都应该从 react-router-dom 中导入。
 
@@ -90,7 +90,7 @@ const App = () => {
 }
 ```
 
-## 定向
+## 导航
 
 React Router 提供了一个 `<Link>` 组件来在你的应用程序中创建链接。无论你在何处渲染一个 `<Link>` ，都会在应用程序的 HTML 中渲染锚 （`<a>`）。
 
@@ -107,7 +107,7 @@ React Router 提供了一个 `<Link>` 组件来在你的应用程序中创建链
 // <a href='/react' className='hurray'>React</a>
 ```
 
-当你想强制定向时，你可以渲染一个 `<Redirect>`。当一个 `<Redirect>` 渲染时，它将使用它的 `to` 属性进行定向。
+当你想强制导航时，你可以渲染一个 `<Redirect>`。当一个 `<Redirect>` 渲染时，它将使用它的 `to` 属性进行定向。
 
 ```jsx
 <Redirect to='/login'/>
