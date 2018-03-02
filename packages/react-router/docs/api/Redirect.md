@@ -46,7 +46,6 @@ import { Route, Redirect } from 'react-router'
 ## from: string
 
 重定向 from 的路径名。可以是任何 [`path-to-regexp`](https://www.npmjs.com/package/path-to-regexp) 能够识别的有效的 URL 路径。
-
 所有匹配的 URL 参数都提供给 `to` 中的模式。必须包含在 `to` 中使用的所有参数。 `to ` 未使用的其他参数将被忽略。
 
 这只能用于在 `<Redirect>` 内部渲染 `<Switch>` 时匹配地址。有关更多详情，请查阅参阅 [`<Switch children>`](./Switch.md#children-node)。
@@ -71,7 +70,5 @@ import { Route, Redirect } from 'react-router'
 完全匹配 `from`；相当于 [Route.exact](./Route.md#exact-bool)。
 
 ## strict: bool
-
-Match `from` strictly; equivalent to [Route.strict](./Route.md#strict-bool).
 
 严格匹配  `from`；相当于 [Route.strict](./Route.md#strict-bool)。
