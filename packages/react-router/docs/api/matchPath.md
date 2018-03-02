@@ -1,6 +1,6 @@
 # matchPath
 
-这里 `<Route>` 可以使用相同的匹配代码，除非在正常渲染周期之外，例如，采集到的数据属于之前渲染到服务器上的。
+这使你可以使用与 `<Route>` 相同的匹配代码，除正常渲染周期外，例如，在服务端渲染之前收集数据依赖。
 
 ```js
 import { matchPath } from 'react-router'
@@ -18,7 +18,7 @@ const match = matchPath('/users/123', {
 
 ## props
 
-第二个参数是匹配的 props，它们与匹配 props 相同 `Route` 接受：
+第二个参数是匹配的 props，它们与 `Route` 接受的 props 相同：
 
 ```js
 {
