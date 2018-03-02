@@ -2,7 +2,7 @@
 
 React Router中有三种类型的组件： router components, route matching components，和 navigation components。
 
-你在Web应用程序中使用的所有组件都应该从 react-router-dom 中导入。
+你在 Web 应用程序中使用的所有组件都应该从 react-router-dom 中导入。
 
 ```js
 import { BrowserRouter, Route, Link } from 'react-router-dom'
