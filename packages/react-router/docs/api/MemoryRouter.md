@@ -1,6 +1,6 @@
 # &lt;MemoryRouter>
 
-[`<Router>`](Router.md) 能在内存中保存你的"URL” 的历史记录(并没有对地址栏进行读写)。在测试环境和非浏览器环境中使用，例如[React Native](https://facebook.github.io/react-native/)。
+[`<Router>`](Router.md) 能在内存中保存你的"URL” 的历史记录(并不会对地址栏进行读写)。很适合在测试环境和非浏览器环境中使用，例如 [React Native](https://facebook.github.io/react-native/)。
 
 ```jsx
 import { MemoryRouter } from 'react-router'
@@ -12,7 +12,7 @@ import { MemoryRouter } from 'react-router'
 
 ## initialEntries: array
 
-历史堆栈中的一个 `location` 数组。这些可能是具有 `{ pathname, search, hash, state }` 或简单的 URL 字符串的完整地址对象。
+history 栈中的一个 `location` 数组。这些可能是具有 `{ pathname, search, hash, state }` 或简单的 URL 字符串的完整地址对象。
 
 ```jsx
 <MemoryRouter
@@ -29,11 +29,11 @@ import { MemoryRouter } from 'react-router'
 
 ## getUserConfirmation: func
 
-用于确认导航的功能。在使用 `<MemoryRouter>` 时，直接使用 `<Prompt>`，您必须使用这个选项。
+用于确认导航的函数。在使用 `<MemoryRouter>` 时，直接使用 `<Prompt>`，您必须使用这个选项。
 
 ## keyLength: number
 
-`location.key` 的长度默认为 6。
+`location.key` 的长度。默认为 6。
 
 ```jsx
 <MemoryRouter keyLength={12}/>
@@ -41,4 +41,4 @@ import { MemoryRouter } from 'react-router'
 
 ## children: node
 
-呈现一个 [单独子元素](https://facebook.github.io/react/docs/react-api.html#react.children.only)。
+渲染一个 [单独子元素](https://facebook.github.io/react/docs/react-api.html#react.children.only)。

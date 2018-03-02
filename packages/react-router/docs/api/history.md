@@ -1,6 +1,6 @@
 # history
 
-本文档中的”history”以及”`history`对象“请参照 [`history` 包](https://github.com/ReactTraining/history)中的内容，History 是 React Router 的两大重要依赖之一(除去 React 本身)，在不同的 Javascript 环境中，它提供多种不同的形式来实现对 session 历史的管理。
+本文档中的 “history” 以及 “`history`对象” 请参照 [`history` 包](https://github.com/ReactTraining/history)中的内容，History 是 React Router 的两大重要依赖之一(除去 React 本身)，在不同的 Javascript 环境中，它提供多种不同的形式来实现对 session 历史的管理。
 
 我们也会使用以下术语：
 
@@ -26,7 +26,7 @@
 
 ## history 是可变的
 
-history 对象是可变的，因此我们建议从 [`<Route>`](./Route.md) 的 props里来获取location ，而不是从 `history.location` 直接获取。这样做可以保证 React 在生命周期中的钩子函数正常执行，例如以下代码：
+history 对象是可变的，因此我们建议从 [`<Route>`](./Route.md) 的 props  里来获取 location ，而不是从 `history.location` 直接获取。这样做可以保证 React 在生命周期中的钩子函数正常执行，例如以下代码：
 
 ```jsx
 class Comp extends React.Component {
@@ -34,7 +34,7 @@ class Comp extends React.Component {
     // locationChanged 将为 true
     const locationChanged = nextProps.location !== this.props.location
 
-    // 错了，因为 history 是可变的所以 locationChanged 将一直为 false
+    // INCORRECT，因为 history 是可变的所以 locationChanged 将一直为 false
     const locationChanged = nextProps.history.location !== this.props.history.location
   }
 }
