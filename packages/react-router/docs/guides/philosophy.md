@@ -49,7 +49,7 @@ const appRoutes: Routes = [
 export class AppModule {}
 ```
 
-Ember 有一个传统的`routes.js`文件，构建、读取，并为你导入到应用程序中。 同样，这发生在你的应用程序渲染之前。
+Ember 有一个传统的 `routes.js` 文件，构建、读取，并为你导入到应用程序中。 同样，这发生在你的应用程序渲染之前。
 
 ```js
 Router.map(function() {
@@ -123,7 +123,7 @@ const App = () => (
 );
 ```
 
-`Route` 将渲染 `<Dashboard {...props}/>`，其中`props`是一些路由器特有的东西，看起来像 `{ match, location, history }`。如果用户不在 `/dashboard` 处，则 `Route` 将渲染 `null`。这就是它的全部内容。
+`Route` 将渲染 `<Dashboard {...props}/>`，其中 `props` 是一些路由器特有的东西，看起来像 `{ match, location, history }`。如果用户不在 `/dashboard` 处，则 `Route` 将渲染 `null`。这就是它的全部内容。
 
 ## 嵌套路由
 
