@@ -1,6 +1,6 @@
 # &lt;BrowserRouter>
 
-使用 HTML5 历史 API 记录（ `pushState `，`replaceState` 和 `popstate` 事件）的 [`Route`](https://github.com/docschina/react-router.cn/blob/cn/packages/react-router/docs/api/Router.md) 使您的UI与URL保持同步。
+使用 HTML5 历史 API 记录（ `pushState `，`replaceState` 和 `popstate` 事件）的 [`Router`](https://github.com/docschina/react-router.cn/blob/cn/packages/react-router/docs/api/Router.md) 使您的UI与URL保持同步。
 
 ```jsx
 import { BrowserRouter } from 'react-router-dom'
