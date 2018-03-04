@@ -1,10 +1,9 @@
 # Quick Start
 
 
-The easiest way to get started with a React web project is with a tool called [Create React App][crapp], a Facebook project with a ton of community help.
+开始使用 React Web 项目最简单的方法是使用名为 [Create React App][crapp] 的工具，这是一个拥有大量社区帮助的 Facebook 项目。
 
-First install create-react-app if you don't already have it, and then
-make a new project with it.
+首先，如果你没有 create-react-app 的话，请下载它，然后让它创建一个新的项目。
 
 ```sh
 npm install -g create-react-app
@@ -12,9 +11,9 @@ create-react-app demo-app
 cd demo-app
 ```
 
-## Installation
+## 安装
 
-React Router DOM is [published to npm](https://npm.im/react-router-dom) so you can install it with either `npm` or [`yarn`](https://yarnpkg.com). Create React App uses yarn, so that's what we'll use.
+React Router DOM [发布在 npm](https://npm.im/react-router-dom)，因此你可以使用 npm 或 [`yarn`](https://yarnpkg.com) 来安装它。我们将要使用 yarn 创建 React App。
 
 ```sh
 yarn add react-router-dom
@@ -22,8 +21,8 @@ yarn add react-router-dom
 npm install react-router-dom
 ```
 
-Now you can copy/paste any of the examples into `src/App.js`. Here's the
-basic one:
+现在，您可以将任何示例复制/粘贴到 `src/App.js` 中。
+基本示例:
 
 ```jsx
 import React from 'react'
@@ -99,6 +98,6 @@ const BasicExample = () => (
 export default BasicExample
 ```
 
-Now you're ready to tinker. Happy routing!
+现在你可以去完善你的项目了！
 
-  [crapp]:https://github.com/facebookincubator/create-react-app
+[crapp]:https://github.com/facebookincubator/create-react-app

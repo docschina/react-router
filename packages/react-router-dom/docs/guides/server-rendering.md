@@ -1,15 +1,15 @@
 # Server Rendering
 
-Rendering on the server is a bit different since it's all stateless. The basic idea is that we wrap the app in a stateless [`<StaticRouter>`][StaticRouter] instead of a [`<BrowserRouter>`][BrowserRouter]. We pass in the requested url from the server so the routes can match and a `context` prop we'll discuss next.
+在服务器上渲染有点儿不同，因为他们都是无状态的。基本思想是我们将 app 包装在一个无状态的 `<StaticRouter>` 中而不是 `<BrowserRouter>` 中。我们通过服务器传入请求的 URL，以便路由可以匹配，然后我们将在下面讨论 `<context>` 属性。
 
 
 ```jsx
-// client
+// 用户端
 <BrowserRouter>
   <App/>
 </BrowserRouter>
 
-// server (not the complete story)
+// 服务器端 (不是完整的代码)
 <StaticRouter
   location={req.url}
   context={context}
@@ -18,7 +18,7 @@ Rendering on the server is a bit different since it's all stateless. The basic i
 </StaticRouter>
 ```
 
-When you render a [`<Redirect>`][Redirect] on the client, the browser history changes state and we get the new screen. In a static server environment we can't change the app state. Instead, we use the `context` prop to find out what the result of rendering was. If we find a `context.url`, then we know the app redirected. This allows us to send a proper redirect from the server.
+当你在客户端上渲染 `<Redirect>` 时，浏览器历史记录会更改状态，我们会看到新的页面。在静态服务器环境中，我们无法更改 app 的状态。相反，我们使用 `context` 属性来找出渲染的结果。如果我们找到 `context.url`，那么我们知道 app 已重定向。这使我们能够通过服务器发送正确的重定向地址。
 
 ```jsx
 const context = {}
@@ -32,16 +32,16 @@ const markup = ReactDOMServer.renderToString(
 )
 
 if (context.url) {
-  // Somewhere a `<Redirect>` was rendered
+  // 某处渲染了一个“<Redirect>”
   redirect(301, context.url)
 } else {
-  // we're good, send the response
+  // 完成后, 发送 response
 }
 ```
 
-## Adding app specific context information
+## app 中添加特定的 context 信息
 
-The router only ever adds `context.url`. But you may want some redirects to be 301 and others 302. Or maybe you'd like to send a 404 response if some specific branch of UI is rendered, or a 401 if they aren't authorized. The context prop is yours, so you can mutate it. Here's a way to distinguish between 301 and 302 redirects:
+路由器只添加 `context.url`。但是你可能需要一些重定向是 301 和 302 的。或者，也许你想发送一个 404 响应，如果一些特定的 UI 分支被渲染，或者 401 响应如果他们没有被授权。那么 context 属性是你的，所以你可以改变它。以下是区分 301 和 302 重定向的方法：
 
 ```jsx
 const RedirectWithStatus = ({ from, to, status }) => (
@@ -81,15 +81,15 @@ const markup = ReactDOMServer.renderToString(
 )
 
 if (context.url) {
-  // can use the `context.status` that
-  // we added in RedirectWithStatus
+  // 这里你可以使用 `context.status` 
+  // 我们添加了RedirectWithStatus
   redirect(context.status, context.url)
 }
 ```
 
-## 404, 401, or any other status
+## 404, 401, 或任何其他 status
 
-We can do the same thing as above. Create a component that adds some context and render it anywhere in the app to get a different status code.
+我们可以做同样的事情，如上所述。 创建一个组件，添加一些 context 并将其渲染在 app 的任何位置以获取不同 status 代码。
 
 ```jsx
 const Status = ({ code, children }) => (
@@ -101,7 +101,7 @@ const Status = ({ code, children }) => (
 )
 ```
 
-Now you can render a `Status` anywhere in the app that you want to add the code to `staticContext`.
+现在，你可以在 app 中的任何位置渲染 `Status`，以便将代码添加到静态 `staticContext`。
 
 ```jsx
 const NotFound = () => (
@@ -120,10 +120,9 @@ const NotFound = () => (
 </Switch>
 ```
 
-## Putting it all together
+## 整合到一起
 
-This isn't a real app, but it shows all of the general pieces you'll
-need to put it all together.
+这不是一个真正的 app，但它显示了所通常应用的代码，你需要把它放在一起的。
 
 ```jsx
 import { createServer } from 'http'
@@ -159,7 +158,7 @@ createServer((req, res) => {
 }).listen(3000)
 ```
 
-And then the client:
+这里是客户端：
 
 ```jsx
 import ReactDOM from 'react-dom'
@@ -173,15 +172,15 @@ ReactDOM.render((
 ), document.getElementById('app'))
 ```
 
-## Data Loading
+## 数据加载
 
-There are so many different approaches to this, and there's no clear best practice yet, so we seek to be composable with any approach, and not prescribe or lean toward one or the other. We're confident the router can fit inside the constraints of your application.
+有许多不同的方法来解决这个问题，但目前还没有明确最佳做法，所以我们试图用任何方法组合，而不是规定或倾向于某一方面。 我们确信路由可以适应你的应用程序的要求。
 
-The primary constraint is that you want to load data before you render. React Router exports the `matchPath` static function that it uses internally to match locations to routes. You can use this function on the server to help determine what your data dependencies will be before rendering.
+主要的限制是你想在渲染之前加载数据。 React Router 导出内部使用的 `matchPath` 静态函数，以便将地址匹配到路由。你可以在服务器上使用此功能来帮助确定渲染前你的数据依赖关系。
 
-The gist of this approach relies on a static route config used to both render your routes and match against before rendering to determine data dependencies.
+这种方法的要点是依赖于静态路由配置，该配置用于渲染路由 ，并且在渲染前匹配，以确定数据依赖关系。
 
-```js
+```jsx
 const routes = [
   { path: '/',
     component: Root,
@@ -191,7 +190,7 @@ const routes = [
 ]
 ```
 
-Then use this config to render your routes in the app:
+然后使用此配置在应用程序中渲染出你的路由：
 
 ```jsx
 import { routes } from './routes'
@@ -205,7 +204,7 @@ const App = () => (
 )
 ```
 
-Then on the server you'd have something like:
+然后在服务器上你会有像这样的代码：
 
 ```js
 import { matchPath } from 'react-router-dom'
@@ -228,12 +227,12 @@ Promise.all(promises).then(data => {
 })
 ```
 
-And finally, the client will need to pick up the data. Again, we aren't in the business of prescribing a data loading pattern for your app, but these are the touch points you'll need to implement.
+最后，客户需要提取数据。同样，我们并没有为你的 app 规定数据加载模式，但这些是你需要实现的点。
 
-You might be interested in our [React Router Config][RRC] package to assist with data loading and server rendering with static route configs.
+你可能会对我们的 [React Router Config][RRC] 软件包感兴趣，以协助用静态路由配置来加载数据和服务器渲染。
 
 
-  [StaticRouter]:../api/StaticRouter.md
-  [BrowserRouter]:../api/BrowserRouter.md
-  [Redirect]:../api/Redirect.md
-  [RRC]:https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
+[StaticRouter]: ../api/StaticRouter.md
+[BrowserRouter]: ../api/BrowserRouter.md
+[Redirect]: ../api/Redirect.md
+[RRC]: https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config

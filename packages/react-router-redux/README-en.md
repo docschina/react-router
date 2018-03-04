@@ -2,18 +2,19 @@
 
 [![npm version](https://img.shields.io/npm/v/react-router-redux/next.svg?style=flat-square)](https://www.npmjs.com/package/react-router-redux)  [![npm downloads](https://img.shields.io/npm/dm/react-router-redux.svg?style=flat-square)](https://www.npmjs.com/package/react-router-redux) [![build status](https://img.shields.io/travis/reactjs/react-router-redux/master.svg?style=flat-square)](https://travis-ci.org/reactjs/react-router-redux)
 
-> **保持你的状态与你的 router 同步 :闪烁:
+> **Keep your state in sync with your router** :sparkles:
 
-这是软件测试版，需要准备的:
+This is beta software, it needs:
 
-1. 一个工作的例子
-2. 一些人尝试去寻找 bug 
-3. 使用 devtools 的策略。
-   - (描述我们之前看到的不同的方法)
+1. A working example
+2. Some people to try it out and find bugs
+3. A strategy for working with the devtools
+   - (issue describing a different approach to what we've seen previously coming soon)
    
 ## Versions
 
-此版本(react-router-redux 5.x) 是与 react-router 4.x一起使用的 react-router-redux 版本，react-router 2.x和 3.x 的用户希望使用在[旧版存储库](https://github.com/reactjs/react-router-redux)中找到的 react-router-redux 。
+This (react-router-redux 5.x) is the version of react-router-redux for use with react-router 4.x. 
+Users of react-router 2.x and 3.x want to use react-router-redux found at [the legacy repository](https://github.com/reactjs/react-router-redux).
 
 ## Installation
 
@@ -24,7 +25,7 @@ npm install --save history
 
 ## Usage
 
-下面是一个基本的工作原理:
+Here's a basic idea of how it works:
 
 ```jsx
 import React from 'react'
