@@ -77,13 +77,13 @@ class MailingListSignup extends Component {
           >
             {submitted ? (
               <Block textAlign="center">
-                <p>Thanks! You've been added to the list.</p>
+                <p>感谢！你已经被添加到列表当中。</p>
                 <p style={{ marginTop: 10 }}>
                   <a
                     style={{ textDecoration: "underline", cursor: "pointer" }}
                     onClick={() => this.setState({ submitted: false })}
                   >
-                    Reset
+                    重置
                   </a>
                 </p>
               </Block>
@@ -96,13 +96,13 @@ class MailingListSignup extends Component {
                   fontSize={isSmallScreen ? "100%" : "150%"}
                   fontWeight="bold"
                 >
-                  Sign up to receive updates about React Router,{" "}
+                  注册以便接受有关 React Router，
                   <a
                     href="https://reacttraining.com"
                     style={{ textDecoration: "underline" }}
                   >
-                    our React workshops
-                  </a>, and more:
+                    React 工作室
+                  </a>， 的更多最新消息：
                 </Block>
                 <form onSubmit={this.handleSubmit}>
                   <Flex
@@ -117,7 +117,9 @@ class MailingListSignup extends Component {
                       placeholder="you@email.com"
                       margin={isSmallScreen ? "0 0 5px 0" : "0 5px 0 0"}
                     />
-                    <Button type="submit">Subscribe</Button>
+                    <Button type="submit" style={{ height: "42px" }}>
+                      订购
+                    </Button>
                   </Flex>
                 </form>
               </div>

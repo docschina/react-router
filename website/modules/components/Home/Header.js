@@ -46,22 +46,29 @@ const NavBar = () => (
       <Inline component="a" props={{ href: "https://reacttraining.com" }}>
         React Training
       </Inline>
+      <Inline> && </Inline>
+      <Inline component="a" props={{ href: "https://docschina.org" }}>
+        docschina
+      </Inline>
       <Inline> / </Inline>
       <Inline
         component="a"
-        props={{ href: "https://github.com/ReactTraining/react-router" }}
+        props={{ href: "https://github.com/docschina/react-router.cn" }}
         color={LIGHT_GRAY}
       >
-        React Router
+        React Router 中文文档
       </Inline>
     </Block>
     <Row fontSize="12px">
-      <NavLink href="https://github.com/ReactTraining/react-router">
+      <NavLink style={{ color: "red" }} href="https://docschina.org">
+        <b>印记中文</b>
+      </NavLink>
+      <NavLink href="https://github.com/docschina/react-router.cn">
         Github
       </NavLink>
       <NavLink href="https://www.npmjs.com/package/react-router">NPM</NavLink>
       <NavLink href="https://reacttraining.com" margin="0">
-        Get Training
+        训练营
       </NavLink>
     </Row>
   </Row>
@@ -83,7 +90,7 @@ const Banner = () => (
               fontSize={isSmallScreen ? "80%" : "120%"}
               fontWeight="bold"
             >
-              Learn once, Route anywhere
+              一次学习，随时随地 Route
             </Block>
             <Block
               component="h2"
@@ -99,12 +106,14 @@ const Banner = () => (
             margin={`${isSmallScreen ? 20 : 20}px 0`}
             fontSize={isSmallScreen ? "80%" : null}
           >
-            Components are the heart of React's powerful, declarative
-            programming model. React Router is a collection of{" "}
-            <b>navigational components</b> that compose declaratively with your
-            application. Whether you want to have <b>bookmarkable URLs</b> for
-            your web app or a composable way to navigate in <b>React Native</b>,
-            React Router works wherever React is rendering--so take your pick!
+            组件是 React 的核心功能，其拥有非常强大的声明式编程模型。React
+            Router 是
+            <b>
+              导航组件
+            </b>的集合，可与你的应用程序进行声明式的组合。无论你是想为你的 Web
+            应用程序添加<b>书签</b>，还是在 <b>React Native</b>{" "}
+            中进行组件化导航，React Router 都可以在 React 的任何位置渲染使用 -
+            所以请考虑使用！
           </Block>
 
           <Row>

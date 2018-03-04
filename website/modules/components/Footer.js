@@ -11,8 +11,20 @@ const ReactTraining = () => (
   <FooterLink href="https://reacttraining.com">React Training</FooterLink>
 );
 
+const Docschina = () => (
+  <FooterLink href="https://docschina.org">
+    <b>印记中文</b>
+  </FooterLink>
+);
+
 const Contributors = () => (
   <FooterLink href="https://github.com/ReactTraining/react-router/graphs/contributors">
+    contributors
+  </FooterLink>
+);
+
+const ContributorsCN = () => (
+  <FooterLink href="https://github.com/docschina/react-router.cn/graphs/contributors">
     contributors
   </FooterLink>
 );
@@ -36,14 +48,18 @@ const Footer = () => (
       fontSize="80%"
     >
       <Block component="p">
-        React Router is built and maintained by <ReactTraining /> and hundreds
-        of <Contributors />.
+        React Router 由 <ReactTraining /> 以及数百名的 <Contributors />{" "}
+        构建和维护。
+      </Block>
+      <Block component="p">
+        React Router 中文网由 <Docschina /> 以及参与翻译的 <ContributorsCN />{" "}
+        构建和维护。
       </Block>
       <Block marginTop="20px" color={LIGHT_GRAY}>
-        &copy; {year} React Training
+        &copy; {year} 印记中文
       </Block>
       <Block color={LIGHT_GRAY}>
-        Code examples and documentation <CC />
+        代码示例以及文档都遵循 <CC />
       </Block>
     </Block>
   </Block>

@@ -1,6 +1,6 @@
 # Migrating 从 v2/v3 到 v4
 
-React Router v4 完全重写，所以没有简单的迁移路径。本指南将为您提供一些步骤，以帮助您了解如何升级您的应用程序
+React Router v4 完全重写了，所以没有简单的迁移路径。本指南将为您提供一些步骤，以帮助您了解如何升级您的应用程序。
 
 **注意：**本迁移指南适用于 React Router v2 和 v3，但为简洁起见，对以前版本的引用仅提及 v3。
 
@@ -15,11 +15,11 @@ React Router v4 完全重写，所以没有简单的迁移路径。本指南将�
 * [PatternUtils](#patternutils)
 * [Link](#link)
 
-## Router
+## The Router
 
-在 React Router v3 中， 有一个  `<Router>`  组件。它有一个 ` history ` 对象的属性.
+在 React Router v3 中， 有一个  `<Router>`  组件。它会提供一个 `history` 对象作为属性。
 
-同样，你可以将应用程序的路由配置提供给 ```<Router>``` 而不用 `routes` 属性 或  `<Router>` 的 ```<children>```。
+同样，你可以将应用程序的路由配置提供给 ```<Router>``` 而不用 `routes` 属性或  `<Router>` 的 ```<children>```。
 
 ```jsx
 // v3
@@ -67,7 +67,7 @@ import routes from './routes'
 
 ## Routes
 
-在 v3 中， `<Route>` 不是一个正真意义上的组件。相反，你所有的应用程序的 `<Route>` 都只是一个用来创建路由配置的对象。
+在 v3 中， `<Route>` 不是一个真正意义上的组件。相反，你所有的应用程序的 `<Route>` 都只是一个用来创建路由配置的对象。
 
 ```jsx
 /// in v3 the element
@@ -123,7 +123,7 @@ React Router v3 提供了 `onEnter`， `onUpdate`，和 `onLeave` 方法。 这�
 
 ### `<Switch>`
 
-在 v3 中， 你可以指定一些子路由，从而只有第一个匹配的会被渲染。
+在 v3 中， 你可以指定一些子路由，只有第一个匹配的会被渲染。
 
 ```jsx
 // v3
@@ -134,7 +134,7 @@ React Router v3 提供了 `onEnter`， `onUpdate`，和 `onLeave` 方法。 这�
 </Route>
 ```
 
-v4 提供了一个泛函性的相似于`<Switch>` 的组件。 当一个 `<Switch>` 被渲染，它会只渲染第一个匹配当前地址的子组件 `<Route>` 。
+v4 提供了一个与`<Switch>` 组件相似的功能。 当一个 `<Switch>` 被渲染，它会只渲染第一个匹配当前地址的子组件 `<Route>` 。
 
 ```jsx
 // v4
@@ -183,7 +183,7 @@ const App = () => (
 // /?source=google → /welcome?source=google
 ```
 
-在 v4 中， 您必须将这些属性重新传递给`to` 属性：
+在 v4 中， 您必须将这些属性重新传递给 `to` 属性：
 
 ```jsx
 // v4
@@ -198,7 +198,7 @@ const App = () => (
 ## PatternUtils
 
 ### matchPattern(pattern, pathname)
-在 v3 中，你可以使用相同的匹配代码来检查路径是否匹配。在 v4 中 它已经被  [matchPath](/packages/react-router/docs/api/matchPath.md) 所替代，它由  [path-to-regexp](https://github.com/pillarjs/path-to-regexp) 库提供支持。
+在 v3 中，你可以使用相同的匹配代码来检查路径是否匹配。在 v4 中它已经被  [matchPath](/packages/react-router/docs/api/matchPath.md) 所替代，它由  [path-to-regexp](https://github.com/pillarjs/path-to-regexp) 库提供支持。
 
 ### formatPattern(pattern, params)
 在 v3 中，你可以使用 PatternUtils.formatPattern 从路径模式中生成有效路径(也许是一个常量或你的主路由配置) 和一个包含 names 参数的对象：
@@ -224,7 +224,7 @@ const thingPath = pathToRegexp.compile(THING_PATH);
 ## Link
 
 ### `to` property is required
-在 v3 中，你可以省略 `to` 属性 或 将其设置为null以创建不带 href 属性的锚标签。
+在 v3 中，你可以省略 `to` 属性或将其设置为null以创建不带 href 属性的锚标签。
 
 ```jsx
 // v3
@@ -233,7 +233,7 @@ const thingPath = pathToRegexp.compile(THING_PATH);
 </Link>
 ```
 
-在 v4 中，你应该始终具备 `to`。如若你添加了一个空的 `to`，你可以制作一个简单的容器包裹它。
+在 v4 中，你应该始终具备 `to`。假如你添加了一个空的 `to`，你可以制作一个简单的容器包裹它。
 
 ```jsx
 // v4
