@@ -1,10 +1,10 @@
 # Testing
 
-React Router 依赖于 React 。这会影响你如何通过使用我们的组件来测试你的组件。
+React Router 依靠 React 环境使用 。这会影响你如何通过使用我们的组件来测试你的组件。
 
 ## Context
 
-如果你尝试单元测试呈现 `<Link>` 或者 `<Router>` 组件，你会得到一些上下文的错误信息和警告信息。虽然你可能会试图自己去掉路由器上下文，但我们建议你将你的单元测试包裹在 `<StaticRouter>` 或者 `<MemoryRouter>` 中。让我们来看一下：
+如果你试图单元测试其中一个渲染了 `<Link>` 或者 `<Router>` 的组件，你会得到一些有关上下文的错误信息和警告信息。虽然你可能会试图自己删除路由器上下文，但我们还是建议你将你的单元测试包裹在 `<StaticRouter>` 或者 `<MemoryRouter>` 中。让我们来看一下：
 
 ```jsx
 class Sidebar extends Component {
@@ -69,7 +69,7 @@ test('current user is active in sidebar', () => {
 
 ## Navigating
 
-当地址（location）发生变化的时候，我们会对路由进行大量的测试，因此你可能不需要测试这个东西。但是如果你必须这样做，基于一切都在渲染中发生，我们可以聪明一点这样做：
+当地址（location）发生变化的时候，我们会对路由进行大量的测试，因此你可能不需要测试这个东西。但是如果你必须这样做，基于一切都在渲染中发生，我们可以像这样做的更聪明一点：
 
 ```jsx
 import { render, unmountComponentAtNode } from 'react-dom'
