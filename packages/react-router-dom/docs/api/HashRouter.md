@@ -2,7 +2,7 @@
 
 使用 URL 的 hash 部分（即 window.location.hash ）的 `<Router>` 使您的 UI 与 URL 保持同步。
 
-**重要提示：**Hash 历史记录不支持 `location.key` 或 `location.state`。 在以前的版本中，我们试图填补行为，但存在我们无法解决的边缘案例。 任何需要此行为的代码或插件都将无法使用。 由于此技术仅用于支持传统浏览器，因此我们鼓励您配置服务器以便与 `<BrowserHistory>` 配合使用。
+**重要提示：**Hash 历史记录不支持 `location.key` 或 `location.state`。在以前的版本中，我们试图填补行为，但存在我们无法解决的边缘案例。 任何需要此行为的代码或插件都将无法使用。由于此技术仅用于支持传统浏览器，因此我们鼓励您配置服务器以便与 `<BrowserHistory>` 配合使用。
 
 ```jsx
 import { HashRouter } from 'react-router-dom'
@@ -23,7 +23,7 @@ import { HashRouter } from 'react-router-dom'
 
 ## getUserConfirmation: func
 
-用于确认导航的功能。 默认使用 [`window.confirm`](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm)。
+用于确认导航的功能。默认使用 [`window.confirm`](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm)。
 
 ```jsx
 // this is the default behavior
@@ -37,7 +37,7 @@ const getConfirmation = (message, callback) => {
 
 ## hashType: string
 
-用于 `window.location.hash` 的编码类型。 可用的值是：
+用于 `window.location.hash` 的编码类型。可用的值是：
 
 - `"slash"` - 创建像 `#/` 和的 `#/sunshine/lollipops` hash 表
 - `"noslash"` - 创建像 `#` 和的 `#sunshine/lollipops` hash 表
