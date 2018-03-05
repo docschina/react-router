@@ -10,8 +10,6 @@
 
 大多数情况下，因为你的页面内容很长，所以你只需要“滚动到顶部”，当浏览时，保持向下滚动。这只需要一个 `<ScrollToTop>` 组件就可以简单的解决，它会在每次导航时向上滚动窗口，请确保将其封装在 Router 中，以便使它可以访问 router 的属性。
 
-大多数情况下，你需要的只是 “滚动到顶部”，因为你有一个长的内容页面，当浏览时，会保持向下滚动状态。使用 `<ScrollToTop>` 组件可以轻松处理这个问题，该组件将在每次导航时向上滚动窗口，请确保将其封装在 router 中，以便访问 router 的属性:
-
 ```jsx
 class ScrollToTop extends Component {
   componentDidUpdate(prevProps) {
