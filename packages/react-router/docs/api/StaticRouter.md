@@ -2,7 +2,7 @@
 
 一个永不改变地址的 [`<Router>`](Router.md)。
 
-当用户没有真正点击时，它对于服务器端渲染脚本是有帮助的，因此该位置实际上并未发生变化。由此命名：静态。当你只需要插入一个位置并且在渲染输出上作出断言时，它在简单测试中也很有用。
+当用户没有真正点击时，它对于服务器端渲染脚本是有帮助的，因此该 location 实际上并未发生变化。由此命名：静态。当你只需要插入一个位置并且在渲染输出上作出断言时，它在简单测试中也很有用。
 
 以下是一个节点服务器示例，它为 [`<Redirect>`](Redirect.md) 发送302状态码，并为其他请求发送常规的 HTML。
 
@@ -38,7 +38,7 @@ createServer((req, res) => {
 
 ## basename: string
 
-所有位置的基本网址。一个正确的命名格式应该有一个前导斜线，而不是后面的斜线。
+所有 location 的基本 URL。一个正确的命名格式应该有一个前导斜线，而不是后面的斜线。
 
 ```jsx
 <StaticRouter basename="/calendar">
@@ -48,7 +48,7 @@ createServer((req, res) => {
 
 ## location: string
 
-服务器收到的URL,或许 `req.url` 会位于节点服务器上。
+服务器收到的 URL,或许 `req.url` 会位于节点服务器上。
 
 ```jsx
 <StaticRouter location={req.url}>
