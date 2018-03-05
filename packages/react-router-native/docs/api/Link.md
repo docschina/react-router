@@ -1,6 +1,6 @@
 # &lt;Link>
 
-Provide declarative, accessible navigation around your application.
+为你的应用程序提供声明式的可访问导航。
 
 ```jsx
 import { Link } from 'react-router-native'
@@ -10,7 +10,7 @@ import { Link } from 'react-router-native'
 
 ## to: string
 
-A string representation of the location to link to, created by concatenating the location's pathname, search, and hash properties.
+通过位置的路径名、搜索和散列属性连接用来创建代表位置链接的字符串。
 
 ```jsx
 <Link to='/courses?sort=name'/>
@@ -18,11 +18,12 @@ A string representation of the location to link to, created by concatenating the
 
 ## to: object
 
-An object that can have any of the following properties:
-  * `pathname`: A string representing the path to link to.
-  * `search`: A string represenation of query parameters, e.g. `?key=value`.
-  * `hash`: A hash to put in the URL, e.g. `#a-hash`.
-  * `state`: State to persist to the `location`.
+一个可以具有以下属性的对象：
+
+- `pathname`: 表示链接路径的字符串。
+- `search`: 表示查询参数的字符串, 例如： `?key=value`。
+- `hash`: 要放入URL的散列， 例如： `#a-hash`。
+- `state`: 状态将持续存在在 `location` 中。
 
 ```jsx
 <Link to={{
@@ -35,7 +36,7 @@ An object that can have any of the following properties:
 
 ## replace: bool
 
-When `true`, clicking the link will replace the current entry in the history stack instead of adding a new one.
+当为 `true` 时，单击该链接将替换历史堆栈中的当前条目，而不是添加一个新条目。
 
 ```jsx
 <Link to="/courses" replace />
@@ -44,6 +45,8 @@ When `true`, clicking the link will replace the current entry in the history sta
 ## component: func
 
 A component for making `Link` respond properly to touches. Typically will be one React Native's "touchable" components (`TouchableHighlight`, `TouchableOpacity`, etc). All props passed to `Link` will be passed along to this component. Defaults to `TouchableHighlight`.
+
+用于使 `Link` 正确响应触摸的组件。 通常会是一个 React Native的 “可触摸”组件（ `TouchableHighlight`，`TouchableOpacity` 等）。 所有传递给 `Link` 的属性都会传递给这个组件。 默认为 `TouchableHighlight` 。
 
 ```jsx
 <Link

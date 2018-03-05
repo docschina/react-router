@@ -35,6 +35,8 @@ import { Route, Redirect } from 'react-router'
 }}/>
 ```
 
+The `state` object can be accessed via `this.props.location.state` in the redirected-to component. This new `referrer` key (which is not a special name) would then be accessed via `this.props.location.state.referrer` in the `Login` component pointed to by the pathname `'/login'`
+
 ## push: bool
 
 当 `true` 时，重定向会将新地址推入 history 中，而不是替换当前地址。

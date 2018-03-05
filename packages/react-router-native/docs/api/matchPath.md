@@ -1,3 +1,3 @@
 # matchPath
 
-Re-exported from core [`matchPath`](../../../react-router/docs/api/matchPath.md)
+从核心 [`matchPath`](../../../react-router/docs/api/matchPath.md) 重新导出。
