@@ -1,6 +1,6 @@
 # &lt;NativeRouter>
 
-A [`<Router>`](../../../react-router/docs/api/Router.md) for iOS and Android apps built using [React Native](https://facebook.github.io/react-native/).
+一个用 [React Native](https://facebook.github.io/react-native/) 为 iOS 和安卓构建的 [`<Router>`](../../../react-router/docs/api/Router.md) 。
 
 ```jsx
 import { NativeRouter } from 'react-router-native'
@@ -12,7 +12,7 @@ import { NativeRouter } from 'react-router-native'
 
 ## getUserConfirmation: func
 
-A function to use to confirm navigation.
+一个用于确认导航的函数
 
 ```jsx
 import { Alert } from 'react-native'
@@ -30,7 +30,7 @@ const getConfirmation = (message, callback) => {
 
 ## keyLength: number
 
-The length of `location.key`. Defaults to 6.
+`location.key` 的长度。默认值为6。
 
 ```jsx
 <NativeRouter keyLength={12}/>
@@ -38,4 +38,4 @@ The length of `location.key`. Defaults to 6.
 
 ## children: node
 
-A [single child element](https://facebook.github.io/react/docs/react-api.html#react.children.only) to render.
+要渲染的[单个子元素](https://facebook.github.io/react/docs/react-api.html#react.children.only)。

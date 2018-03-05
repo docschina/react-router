@@ -1,6 +1,6 @@
 # &lt;BackButton>
 
-Connects the global back button on Android and tvOS to the router's history. On Android, when the initial location is reached, the default back behavior takes over. Just render one somewhere in your app.
+将Android和tvOS上的全局后退按钮连接到 router 的历史记录。在Android上，当到达初始位置时，默认的后退行为将接管。只需在你的应用程序中的某处进行渲染。
 
 ```jsx
 <BackButton/>
@@ -8,7 +8,7 @@ Connects the global back button on Android and tvOS to the router's history. On 
 
 ## children
 
-If you want to avoid the floating configuration component, you can compose with children.
+如果你要避开浮动的配置组件，可以使用子组件进行组合。
 
 ```jsx
 <NativeRouter>
@@ -25,3 +25,4 @@ If you want to avoid the floating configuration component, you can compose with 
   </View>
 </NativeRouter>
 ```
+
