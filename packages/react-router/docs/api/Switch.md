@@ -11,7 +11,7 @@
 <Route component={NoMatch}/>
 ```
 
-如果 URL 是 `/about` ， 那么 `<About>` ， `<User>` ， `<NoMatch>`将全部渲染，因为他们都与路径匹配。这是通过设计实现的，允许我们以多种方式将 `<Route>` 组合到应用程序中，类似侧边栏（sidebars）和面包屑导航（breadcrumbs）， bootstrap标签等等，但是有时候我们只想选择一条 `<Route>` 进行渲染，如果我们在 `/about` ，我们又不想匹配 `/:user` （或者显示404）。以下是如何使用 `Switch` 执行此操作:
+如果 URL 是 `/about` ， 那么 `<About>` ， `<User>` ， `<NoMatch>`将全部渲染，因为他们都与路径匹配。这是通过设计实现的，允许我们以多种方式将 `<Route>` 组合到应用程序中，类似侧边栏（sidebars）和面包屑导航（breadcrumbs）， bootstrap 标签等等，但是有时候我们只想选择一条 `<Route>` 进行渲染，如果我们在 `/about` ，我们又不想匹配 `/:user` （或者显示404）。以下是如何使用 `Switch` 执行此操作:
 
 ```jsx
 import { Switch, Route } from 'react-router'
